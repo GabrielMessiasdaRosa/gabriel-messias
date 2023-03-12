@@ -1,5 +1,5 @@
 import Col from "./col";
-import Header from "./header";
+import Navbar from "./navbar";
 
 export type DefaultLayoutProps = {
   children: React.ReactNode;
@@ -7,8 +7,8 @@ export type DefaultLayoutProps = {
 
 const DefaultLayout = ({ children }: DefaultLayoutProps) => {
   return (
-    <Col className="w-screen items-center justify-center">
-      <Header />
+    <Col className="w-screen items-center justify-center overflow-hidden pb-10">
+      <Navbar />
       {children}
     </Col>
   );
