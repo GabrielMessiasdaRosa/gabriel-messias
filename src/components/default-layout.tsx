@@ -1,5 +1,4 @@
 import Col from "./col";
-import Container from "./container";
 import Header from "./header";
 
 export type DefaultLayoutProps = {
@@ -8,9 +7,9 @@ export type DefaultLayoutProps = {
 
 const DefaultLayout = ({ children }: DefaultLayoutProps) => {
   return (
-    <Col className="items-center justify-center w-screen">
+    <Col className="w-screen items-center justify-center">
       <Header />
-      <Container>{children}</Container>
+      {children}
     </Col>
   );
 };

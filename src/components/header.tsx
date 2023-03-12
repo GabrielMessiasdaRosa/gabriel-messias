@@ -5,13 +5,13 @@ export type HeadeProps = {};
 
 const Header = ({}: HeadeProps) => {
   return (
-    <header className="flex shadow-md shadow-slate-100/20 -mt-1 py-4 w-full ">
+    <header className="flex w-full py-4">
       <Container>
-        <Row className="justify-between items-center h-10">
-          <Row className="space-x-24 items-center">
+        <Row className="h-10 items-center justify-between">
+          <Row className="items-center space-x-24">
             <p
-              className="text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-[#ee0979]
-       to-[#ff6a00]"
+              className="bg-gradient-to-br from-[#ee0979] to-[#ff6a00] bg-clip-text text-2xl font-extrabold
+       text-transparent"
             >
               GMR.dev
             </p>

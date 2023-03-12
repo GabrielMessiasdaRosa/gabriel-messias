@@ -10,11 +10,11 @@ const Button = ({ children, className, onClick }: ButtonProps) => {
     <button
       onClick={onClick}
       className={`
-       transition-all duration-300
-       bg-gradient-to-r from-[#ee0979]
-       to-[#ff6a00] text-white 
-       rounded-full px-4 py-2 bg-size-150
-       bg-pos-50 hover:bg-pos-100
+       rounded-full bg-gradient-to-r
+       from-[#ee0979] to-[#ff6a00]
+       bg-size-150 bg-pos-50 
+       px-4 py-2 text-white transition-all
+       duration-300 hover:bg-pos-100
       ${className}`}
     >
       {children}
