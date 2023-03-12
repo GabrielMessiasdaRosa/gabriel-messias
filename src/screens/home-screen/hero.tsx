@@ -6,7 +6,7 @@ const Hero = ({}: HeroProps) => {
     <Col className="items-center justify-center h-[54rem]">
       <Image
         alt="Gabriel Messias da Rosa Profile picture"
-        src="/../public/images/me.jpeg"
+        src="https://media.licdn.com/dms/image/C4D03AQEpHyv9RwJeVA/profile-displayphoto-shrink_800_800/0/1619282232881?e=1684368000&v=beta&t=Y16aHfqnbv3DjX1KwN0MaA7vg4CtWEk05iTdIgelfmw"
         width={220}
         height={220}
         className="rounded-full overflow-hidden"
