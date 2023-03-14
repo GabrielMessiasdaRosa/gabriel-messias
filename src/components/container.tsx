@@ -6,7 +6,7 @@ export type ContainerProps = {
 
 const Container = ({ children }: ContainerProps) => {
   return (
-    <Col className="relative w-full items-center justify-center overflow-hidden">
+    <Col className="relative w-full items-center justify-center">
       <Col className="md:w-[720px] xl:w-[1280px]">{children}</Col>
     </Col>
   );
