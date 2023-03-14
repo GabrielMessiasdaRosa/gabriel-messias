@@ -1,4 +1,5 @@
 import Col from "./col";
+import Footer from "./footer";
 import Navbar from "./navbar";
 
 export type DefaultLayoutProps = {
@@ -7,9 +8,12 @@ export type DefaultLayoutProps = {
 
 const DefaultLayout = ({ children }: DefaultLayoutProps) => {
   return (
-    <Col className="w-screen items-center justify-center overflow-hidden pb-10">
-      <Navbar />
-      {children}
+    <Col className="items-center justify-center overflow-hidden pb-10">
+      <div className="w-full">
+        <Navbar />
+        {children}
+        <Footer />
+      </div>
     </Col>
   );
 };
