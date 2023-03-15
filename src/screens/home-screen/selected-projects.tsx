@@ -80,7 +80,7 @@ const SelectedProductsSection = ({}: SelectedProjectsSectionProps) => {
                     {project.name}
                   </p>
                   <p className="text-xl font-thin lg:text-2xl">Tech Stack:</p>
-                  <Col className="grid md:w-1/2 grid-cols-2 gap-2 md:grid-cols-2">
+                  <Col className="grid grid-cols-2 gap-2 md:w-1/2 md:grid-cols-2">
                     {project.techStack.map((tech, index) => (
                       <div key={index}>
                         <Row className="w-full items-center justify-center whitespace-nowrap rounded-full bg-white bg-gradient-to-br from-[#ee0979] to-[#ff6a00] p-[1px] font-light lg:hidden">

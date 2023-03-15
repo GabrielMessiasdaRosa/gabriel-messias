@@ -31,12 +31,12 @@ const Navbar = ({}: NavbarProps) => {
                         <span className="sr-only">Open main menu</span>
                         {open ? (
                           <XMarkIcon
-                            className="block h-6 w-6"
+                            className="block h-8 w-8"
                             aria-hidden="true"
                           />
                         ) : (
                           <Bars3Icon
-                            className="block h-6 w-6"
+                            className="block h-8 w-8"
                             aria-hidden="true"
                           />
                         )}
@@ -77,10 +77,10 @@ const Navbar = ({}: NavbarProps) => {
           </Row>
           <Row className="w-full items-center justify-center px-4 sm:items-stretch sm:justify-between">
             <Col>
-              <p className="hidden bg-gradient-to-br from-[#ee0979] to-[#ff6a00] bg-clip-text text-2xl font-extrabold text-transparent sm:flex md:ml-0">
+              <p className="hidden font-poiret text-2xl font-extrabold text-white text-transparent sm:flex md:ml-0">
                 Gabriel Messias da Rosa
               </p>
-              <p className="bg-gradient-to-br from-[#ee0979] to-[#ff6a00] bg-clip-text text-2xl font-extrabold text-transparent sm:hidden md:ml-0">
+              <p className="font-poiret text-2xl font-extrabold text-white text-transparent sm:hidden md:ml-0">
                 GMR
               </p>
             </Col>

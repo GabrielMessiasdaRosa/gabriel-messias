@@ -1,5 +1,4 @@
 import Col from "./col";
-import Container from "./container";
 import Row from "./row";
 
 export type FooterProps = {};
@@ -9,12 +8,12 @@ function classNames(...classes) {
 }
 const Footer = ({}: FooterProps) => {
   return (
-    <Container>
-      <footer className="pt-16">
-        <div className="border-b-2 border-gray-50/30" />
+    <>
+      <div className="border-b-2 border-gray-50/30 pt-16" />
+      <footer className="px-8 ">
         <Col className="space-y-2 overflow-hidden py-20">
           <Col className="space-y-2 md:flex-row md:justify-between">
-            <p className="bg-gradient-to-br from-[#ee0979] to-[#ff6a00] bg-clip-text text-2xl font-extrabold text-transparent md:ml-0">
+            <p className="bg-gradient-to-br from-[#ee0979] to-[#ff6a00] bg-clip-text font-poiret text-2xl font-extrabold text-transparent md:ml-0">
               Gabriel Messias da Rosa
             </p>
             <Row>
@@ -67,7 +66,7 @@ const Footer = ({}: FooterProps) => {
           </Row>
         </Col>
       </footer>
-    </Container>
+    </>
   );
 };
 

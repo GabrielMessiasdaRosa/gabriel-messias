@@ -10,8 +10,8 @@ const SkillsMarquee = ({}: SkillsMarqueeProps) => {
     "API consumption",
     "Best practices",
     "Performance",
-    "Accessibility",
     "Clean code",
+    "Responsive design",
   ];
   return (
     <Col className="h-24 w-full justify-center bg-gradient-to-tr from-[#ee0979] to-[#ff6a00]">
