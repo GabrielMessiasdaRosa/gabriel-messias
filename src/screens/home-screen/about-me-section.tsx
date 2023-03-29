@@ -8,7 +8,7 @@ const AboutMeSection = ({}: AboutMeSectionProps) => {
       <Col className="space-y-16">
         <Col className="xl:flex-row">
           <Col className="w-full xl:w-1/2">
-            <p className="bg-gradient-to-br from-[#ee0979] to-[#ff6a00] bg-clip-text font-poiret text-3xl font-extrabold text-transparent">
+            <p className=" bg-clip-text font-poiret text-3xl font-extrabold ">
               Gabriel Messias da Rosa
             </p>
             <p className="text-6xl">Front-end Developer</p>

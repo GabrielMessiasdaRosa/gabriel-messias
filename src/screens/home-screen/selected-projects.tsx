@@ -9,7 +9,7 @@ export type SelectedProjectsSectionProps = {};
 const SelectedProductsSection = ({}: SelectedProjectsSectionProps) => {
   const projects = [
     {
-      name: "Chatkick webpages",
+      name: "Chatkick",
       techStack: [
         "Next.js",
         "React",
@@ -21,7 +21,7 @@ const SelectedProductsSection = ({}: SelectedProjectsSectionProps) => {
       image: Chatkick,
     },
     {
-      name: "TalentCRM webpage",
+      name: "TalentCRM",
       techStack: [
         "Next.js",
         "React",
@@ -33,7 +33,7 @@ const SelectedProductsSection = ({}: SelectedProjectsSectionProps) => {
       image: TalentCRM,
     },
     {
-      name: "Interview Insights webpage",
+      name: "Interview Insights ",
       techStack: [
         "Next.js",
         "React",
@@ -47,7 +47,7 @@ const SelectedProductsSection = ({}: SelectedProjectsSectionProps) => {
   ];
 
   return (
-    <section className="max-w-xs sm:max-w-sm md:max-w-none">
+    <section className="max-w-xs  sm:max-w-sm md:max-w-none">
       <Col className="space-y-8">
         <Col className="space-y-8">
           <Col>
@@ -55,7 +55,7 @@ const SelectedProductsSection = ({}: SelectedProjectsSectionProps) => {
               Projects that I've worked on
             </h3>
           </Col>
-          <Col className="md:w-1/2 md:text-xl">
+          <Col className="md:w-4/6 md:text-xl">
             <code>
               I made websites and web applications with a focus on user
               experience. I have worked with a variety of clients, from small
@@ -64,42 +64,45 @@ const SelectedProductsSection = ({}: SelectedProjectsSectionProps) => {
             </code>
           </Col>
         </Col>
-        <Col className="space-y-8">
-          {projects.map((project, index) => (
-            <Col key={index} className="group relative overflow-hidden">
-              <Image
-                src={project.image}
-                alt="Selected Projects"
-                width={1500}
-                height={800}
-                className="rounded-xl"
-              />
-              <Col className="bottom-0 w-full bg-gradient-to-r from-[#161513] via-[#161513]/90 to-[#161513]/50 transition-all duration-500 ease-in-out lg:absolute lg:-mb-96 lg:group-hover:-mb-0 ">
-                <Col className="space-y-2 py-6 lg:p-20">
-                  <p className="text-2xl font-thin lg:text-5xl">
-                    {project.name}
-                  </p>
-                  <p className="text-xl font-thin lg:text-2xl">Tech Stack:</p>
-                  <Col className="grid grid-cols-2 gap-2 md:w-1/2 md:grid-cols-2">
-                    {project.techStack.map((tech, index) => (
-                      <div key={index}>
-                        <Row className="w-full items-center justify-center whitespace-nowrap rounded-full bg-white bg-gradient-to-br from-[#ee0979] to-[#ff6a00] p-[1px] font-light lg:hidden">
-                          <p className="flex w-full items-center justify-center rounded-full bg-[#161513] px-2 text-lg lg:hidden">
-                            {tech}
-                          </p>
-                        </Row>
-                        <Row className="hidden w-full items-center justify-center whitespace-nowrap rounded-full bg-white bg-gradient-to-br from-[#ee0979] to-[#ff6a00] p-[1px] text-lg font-light  lg:flex">
-                          <p className="flex w-full items-center justify-center rounded-full bg-[#161513] px-4">
-                            {tech}
-                          </p>
-                        </Row>
-                      </div>
-                    ))}
+        <Col className="space-y-16">
+          {projects.map((project, index) => {
+            const impared = index % 2 === 0;
+            return (
+              <Col
+                key={index}
+                className={`h-96 items-center overflow-hidden lg:h-80 lg:flex-row  ${
+                  impared ? "" : "lg:flex-row-reverse"
+                } `}
+              >
+                <Image
+                  src={project.image}
+                  alt="Selected Projects"
+                  width={5000}
+                  height={5000}
+                  className="rounded-xl md:w-1/2"
+                />
+                <Col className="bottom-0 w-full items-center justify-center">
+                  <Col className="space-y-2 py-6 ">
+                    <p className="text-2xl font-thin lg:text-5xl">
+                      {project.name}
+                    </p>
+                    <p className="text-xl font-thin lg:text-2xl">Tech Stack:</p>
+                    <Col className="grid grid-cols-3 gap-2">
+                      {project.techStack.map((tech, index) => (
+                        <div key={index}>
+                          <Row className="w-full items-center justify-center whitespace-nowrap rounded-full bg-white bg-gradient-to-br from-[#ee0979] to-[#ff6a00] p-[1px] font-light">
+                            <p className="flex w-full items-center justify-center rounded-full bg-[#161513] px-2 text-lg ">
+                              {tech}
+                            </p>
+                          </Row>
+                        </div>
+                      ))}
+                    </Col>
                   </Col>
                 </Col>
               </Col>
-            </Col>
-          ))}
+            );
+          })}
         </Col>
       </Col>
     </section>

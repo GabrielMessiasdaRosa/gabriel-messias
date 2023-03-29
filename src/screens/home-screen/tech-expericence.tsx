@@ -73,8 +73,11 @@ const TechExp = ({}: TechExpProp) => {
         </p>
         <Row className="space-x-4">
           <Marquee gradient={false} direction="left" speed={130}>
-            {technologies.map((technology) => (
-              <Col className="ml-6 h-56 w-44 items-center justify-center space-y-4 rounded-lg bg-[#1C1C22] p-4">
+            {technologies.map((technology, index) => (
+              <Col
+                key={index}
+                className="ml-6 h-56 w-44 items-center justify-center space-y-4 rounded-lg bg-[#1C1C22] p-4"
+              >
                 <img className="h-28" src={technology.image} alt="HTML5" />
                 <span className="whitespace-nowrap text-2xl font-bold">
                   {technology.name}

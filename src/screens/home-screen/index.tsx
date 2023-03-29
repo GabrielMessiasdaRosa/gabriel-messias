@@ -1,3 +1,4 @@
+import Bubble from "../../components/bubble";
 import Col from "../../components/col";
 import Container from "../../components/container";
 import AboutMeSection from "./about-me-section";
@@ -9,7 +10,7 @@ export type HomeScreenProps = {};
 
 const HomeScreen = ({}: HomeScreenProps) => {
   return (
-    <Col className="w-full space-y-16">
+    <Col className="relative w-full space-y-16 ">
       <Container>
         <HeroSection />
       </Container>
@@ -23,6 +24,7 @@ const HomeScreen = ({}: HomeScreenProps) => {
           <TechExp />
         </Col>
       </Container>
+      <Bubble />
     </Col>
   );
 };
