@@ -27,13 +27,11 @@ const Bubble = ({}: BubbleProps) => {
             : isInProjectsSection
             ? "shape-2"
             : isInProjetc1Section
-            ? "shape-3 bg-gradient-to-r from-[#ffc400] to-[#00c9c9] "
+            ? "shape-3 bg-gradient-to-r from-[#ffc400] to-[#00c9c9]"
             : isInProjetc2Section
             ? "shape-4 bg-gradient-to-b from-[#2a02bb] to-[#ffc400]"
             : isInProjetc3Section
             ? "shape-5 bg-gradient-to-r from-[#2a02bb] to-[#00c9c9]"
-            : isInAboutMeSection
-            ? "shape-6"
             : "shape-6"
         }`}
       />
