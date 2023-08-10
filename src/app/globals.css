@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.debug {
+  border: 1px solid red;
+}
+
+nav header {
+  @apply mx-auto max-w-[120rem] px-4 sm:px-6 lg:px-8 !important;
+}
