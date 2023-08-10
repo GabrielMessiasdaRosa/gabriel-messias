@@ -1,13 +1,9 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
+import type { NextPage } from "next";
+import HomeScreen from "../screens/home-screen";
 
-const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link className="text-8xl" href="/about">About</Link>
-    </p>
-  </Layout>
-)
+export type HomePage = {};
 
-export default IndexPage
+const HomePage: NextPage = ({}: HomePage) => {
+  return <HomeScreen />;
+};
+export default HomePage;
