@@ -24,7 +24,9 @@ export default function Navbar({}: NavbarProps) {
           <p className="font-major-mono font-extrabold text-4xl">GM</p>
           <div className="flex flex-col justify-center">
             <div className="text-primary-500 -mb-1">desenvolvimento</div>
-            <div className="text-cyan-500 -mt-1">front-end</div>
+            <div id={"subs"} className="text-cyan-500 -mt-1">
+              front-end
+            </div>
           </div>
         </div>
       </NavbarBrand>
@@ -52,11 +54,11 @@ const menuItems: NavbarItemProps["item"][] = [
     label: "~/Home",
   },
   {
-    href: "/contato",
-    label: "~/Contato",
-  },
-  {
     href: "/projetos",
     label: "~/Projetos",
+  },
+  {
+    href: "/contato",
+    label: "~/Contato",
   },
 ];

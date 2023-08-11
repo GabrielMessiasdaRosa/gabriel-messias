@@ -23,7 +23,10 @@ export default function NavbarItem({ item }: NavbarItemProps) {
       className="active:scale-95"
       isActive={isActive}
     >
-      <Link className="hover:text-primary-800 text-primary-500" href={item.href}>
+      <Link
+        className="hover:text-primary-800 text-primary-500 hover-effect"
+        href={item.href}
+      >
         {item.label}
       </Link>
     </NUINavbarItem>
