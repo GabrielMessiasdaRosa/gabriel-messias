@@ -1,3 +1,4 @@
+import Cursor from "@/components/cursor";
 import Navbar from "@/components/navbar";
 import type { Metadata } from "next";
 import { Ubuntu_Mono } from "next/font/google";
@@ -28,6 +29,7 @@ export default function RootLayout({
     >
       <body className={ubuntu_mono.className}>
         <Providers>
+          <Cursor />
           <Navbar />
           {children}
           {/* <Footer /> */}

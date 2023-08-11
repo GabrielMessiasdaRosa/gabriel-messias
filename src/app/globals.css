@@ -7,6 +7,12 @@
   border: 1px solid red;
 }
 
+html *,
+html *:before,
+html *:after {
+  cursor: none;
+}
+
 nav header {
   @apply mx-auto max-w-[120rem] px-4 sm:px-6 lg:px-8 !important;
 }
