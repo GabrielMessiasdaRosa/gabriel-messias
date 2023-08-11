@@ -7,6 +7,10 @@
   border: 1px solid red;
 }
 
+* {
+  cursor: url("/main-cursor.png"), auto;
+}
+
 nav header {
   @apply mx-auto max-w-[120rem] px-4 sm:px-6 lg:px-8 !important;
 }
