@@ -1,8 +1,7 @@
 "use client";
 
-import NavbarItem, { NavbarItemProps } from "@/components/navbar-item";
-import { MotionValue, useTransform } from "framer-motion";
-import React, { useRef } from "react";
+import React from "react";
+import NavbarItem, { NavbarItemProps } from "./navbar-item";
 import {
   Navbar as NUINavbar,
   NavbarBrand,
@@ -18,12 +17,15 @@ export default function Navbar({}: NavbarProps) {
     <NUINavbar
       onMenuOpenChange={() => setIsMenuOpen(!isMenuOpen)}
       shouldHideOnScroll
-      className="backdrop-blur-3xl bg-transparent"
+      className="backdrop-blur-3xl bg-black flex"
     >
       <NavbarBrand>
-        <div>
-          <p>Gabriel Messias da Rosa</p>
-          <sup>desenvolvedor front-end</sup>
+        <div className="flex gap-2 items-center">
+          <p className="font-major-mono font-extrabold text-4xl">GM</p>
+          <div className="flex flex-col justify-center">
+            <div className="text-primary-500 -mb-1">desenvolvimento</div>
+            <div className="text-cyan-500 -mt-1">front-end</div>
+          </div>
         </div>
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
