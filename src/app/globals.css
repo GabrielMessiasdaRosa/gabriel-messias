@@ -7,8 +7,10 @@
   border: 1px solid red;
 }
 
-* {
-  cursor: url("/main-cursor.png"), auto;
+html *,
+html *:before,
+html *:after {
+  cursor: none;
 }
 
 nav header {

@@ -35,26 +35,26 @@ export default function HeroSection({}: HeroSectionProps) {
         />
         <div className="flex px-8 flex-col lg:flex-row flex-1 max-w-7xl items-center justify-center ">
           <div className="lg:w-1/2 flex flex-col text-center lg:text-start justify-center h-1/2 font-extrabold text-4xl">
-            <h1 className="text-primary-500 font-prompt text-8xl">
+            <h1 className="text-primary-500 font-prompt text-4xl lg:text-8xl hover-effect">
               Gabriel Messias da Rosa
             </h1>
             <h2>
-              <span className="text-cyan-500 font-extralight text-4xl">
+              <span className="text-cyan-500 font-extralight text-xl lg:text-4xl hover-effect">
                 desenvolvedor front-end
               </span>
             </h2>
           </div>
           <div className="lg:w-1/2 gap-8 flex flex-col items-start lg:text-start">
-            <p className="text-3xl">
+            <p className="lg:text-3xl">
               Descubra como a criatividade e o código se unem para criar
               soluções únicas.
             </p>
-            <div className="flex gap-8 items-center justify-between">
-              <Button className="rounded-none" color="success">
+            <div className="flex w-full lg:w-auto gap-8 items-center justify-evenly">
+              <Button className="rounded-none hover-effect" color="success">
                 Download CV
               </Button>
               <Button
-                className="rounded-none text-white"
+                className="transition-all rounded-none text-white hover-effect"
                 color="primary"
                 variant="bordered"
               >
