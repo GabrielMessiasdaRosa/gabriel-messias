@@ -1,15 +1,13 @@
-import Col from "./col";
+import React from "react";
 
-export type ContainerProps = {
-  children: React.ReactNode;
-};
+export interface ContainerProps {
+  children: React.ReactNode | React.ReactNode[];
+}
 
-const Container = ({ children }: ContainerProps) => {
+export default function Container({ children }: ContainerProps) {
   return (
-    <Col className="relative w-full items-center justify-center">
-      <Col className=" px-8 md:w-11/12 xl:w-[1280px]">{children}</Col>
-    </Col>
+    <div className="mx-auto max-w-[120rem] px-4 sm:px-6 lg:px-8">
+      {children}
+    </div>
   );
-};
-
-export default Container;
+}

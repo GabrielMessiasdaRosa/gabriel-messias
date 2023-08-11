@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Prompt:ital,wght@0,900;1,900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.debug {
+  border: 1px solid red;
+}
+
+nav header {
+  @apply mx-auto max-w-[120rem] px-4 sm:px-6 lg:px-8 !important;
+}
+.custom-shape-divider-bottom-1691727814 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1691727814 svg {
+  position: relative;
+  display: block;
+  width: calc(220% + 1.3px);
+  height: 87px;
+  transform: rotateY(180deg);
+}
+
+.font-major-mono {
+  font-family: "Major Mono Display", monospace;
+}
+
+.font-prompt {
+  font-family: "Major Mono Display", monospace;
+  font-family: "Prompt", sans-serif;
+}
