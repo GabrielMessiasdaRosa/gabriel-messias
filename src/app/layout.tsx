@@ -27,7 +27,7 @@ export default function RootLayout({
       lang="pt"
       className="font-mono scroll-smooth bg-gray-100 text-gray-50"
     >
-      <body className={ubuntu_mono.className}>
+      <body className={`block-main-scroll ${ubuntu_mono.className}`}>
         <Providers>
           <Cursor />
           <Navbar />

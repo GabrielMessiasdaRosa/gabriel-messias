@@ -1,12 +1,13 @@
 import Container from "@/components/container";
 import HeroSection from "@/components/hero-section";
+import TimelineSection from "@/components/timeline-section";
 
 export default function Home() {
   return (
-    <main className="h-[2000px]">
-      <HeroSection></HeroSection>
+    <main className="h-[2000px] ">
+      <HeroSection />
       <Container>
-        <h1>teste</h1>
+        <TimelineSection />
       </Container>
     </main>
   );

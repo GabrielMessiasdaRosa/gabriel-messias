@@ -11,10 +11,10 @@ export default function Cursor({}: CursorProps) {
 
   const cursorX = useMotionValue(-100);
   const cursorY = useMotionValue(-100);
+
   useEffect(() => {
     const mobile = window.innerWidth < 768;
     if (!mobile) {
-      setIsMobile(false);
       const addHoverEffect = (event: any) => {
         const element = event.target;
         if (element.classList.contains("hover-effect")) {
@@ -26,27 +26,18 @@ export default function Cursor({}: CursorProps) {
           setHoverLg(false);
         }
       };
-      document.addEventListener("mouseover", addHoverEffect);
-      return () => {
-        document.removeEventListener("mouseover", addHoverEffect);
-      };
-    } else {
-      setIsMobile(true);
-    }
-  }, []);
-  useEffect(() => {
-    const mobile = window.innerWidth < 768;
-    if (!mobile) {
-      const moveCursor = (event: any) => {
+      const moveCursor = (event: MouseEvent) => {
         cursorX.set(event.clientX - 8);
         cursorY.set(event.clientY - 8);
       };
+      document.addEventListener("mouseover", addHoverEffect);
       window.addEventListener("mousemove", moveCursor);
       return () => {
+        document.removeEventListener("mouseover", addHoverEffect);
         window.removeEventListener("mousemove", moveCursor);
       };
     } else {
-      console.log("mobile");
+      setIsMobile(true);
     }
   }, []);
   return isMobile ? null : (
@@ -54,13 +45,17 @@ export default function Cursor({}: CursorProps) {
       id={"cursor"}
       className="cursor"
       animate={{
-        scale: hover ? 3 : hoverLg ? 5 : 1,
+        scale: hover ? 3 : hoverLg ? 8 : 1,
       }}
       transition={{
         type: "spring",
-        damping: 6,
-        stiffness: 50,
-        restDelta: 0.9,
+        stiffness: 260,
+        damping: 20,
+        duration: 0.3,
+        mass: 1,
+        restDelta: 0.01,
+        restSpeed: 10,
+        delay: 0.1,
       }}
       style={{
         zIndex: 9999,
