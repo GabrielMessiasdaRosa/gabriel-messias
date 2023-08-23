@@ -18,6 +18,7 @@ const config: Config = {
   },
   darkMode: "class",
   plugins: [
+    require("tailwind-scrollbar-hide"),
     nextui({
       themes: {
         light: {

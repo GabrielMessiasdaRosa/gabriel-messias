@@ -21,13 +21,7 @@ export default function Navbar({}: NavbarProps) {
     >
       <NavbarBrand>
         <div className="flex gap-2 items-center">
-          <p className="font-major-mono font-extrabold text-4xl">GM</p>
-          <div className="flex flex-col justify-center">
-            <div className="text-primary-500 -mb-1">desenvolvimento</div>
-            <div id={"subs"} className="text-cyan-500 -mt-1">
-              front-end
-            </div>
-          </div>
+          <p className="font-major-mono font-extrabold text-4xl">GMR</p>
         </div>
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
@@ -43,6 +37,7 @@ export default function Navbar({}: NavbarProps) {
         {menuItems.map((item, index) => (
           <NavbarItem item={item} key={`${item}` + `${index}`} />
         ))}
+        <NavbarItem item={{ href: "#projects", label: "projects" }} />
       </NavbarMenu>
     </NUINavbar>
   );
@@ -51,14 +46,14 @@ export default function Navbar({}: NavbarProps) {
 const menuItems: NavbarItemProps["item"][] = [
   {
     href: "/",
-    label: "~/Home",
+    label: "~/home",
   },
   {
-    href: "/projetos",
-    label: "~/Projetos",
+    href: "/#projects",
+    label: "~/trajetoria",
   },
   {
-    href: "/contato",
-    label: "~/Contato",
+    href: "/#contato",
+    label: "~/contato",
   },
 ];
