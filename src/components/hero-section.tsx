@@ -26,9 +26,9 @@ export default function HeroSection({}: HeroSectionProps) {
           </div>
           <div className="lg:w-1/2 gap-8 flex flex-col items-start lg:text-start">
             <p className="lg:text-3xl text-xl text-center lg:text-start">
-              Descubra como eu uso a{" "}
+              Descubra como a{" "}
               <span className="text-[#b881ff] font-prompt">criatividade</span> e
-              o <span className="text-[#ff9950] font-prompt">código</span> para
+              o <span className="text-[#ff9950] font-prompt">código</span> se unem para
               criar{" "}
               <span className="font-prompt text-2xl lg:text-4xl text-gradient-animate">
                 soluções únicas !

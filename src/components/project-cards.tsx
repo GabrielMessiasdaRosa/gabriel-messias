@@ -26,7 +26,7 @@ export default function ProjectCards({
     }
   }, [isInView]);
   return (
-    <div className="flex justify-center" ref={ref}>
+    <div className="flex justify-center">
       <Parallax pages={projects.length} className="z-50 bg-black max-w-[93%] ">
         {projects.map((project, index) => {
           return (
@@ -78,7 +78,7 @@ export default function ProjectCards({
                   }}
                   transition={{
                     duration: 1,
-                    delay: 2,
+                    delay: 4,
                   }}
                 >
                   <svg
@@ -121,6 +121,7 @@ export default function ProjectCards({
           </AnimatePresence>
         </ParallaxLayer>
       </Parallax>
+      <div className="w-1 h-1 absolute z-50 bottom-60" ref={ref} />
     </div>
   );
 }
