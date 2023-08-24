@@ -7,7 +7,7 @@ export interface HeroSectionProps {}
 
 export default function HeroSection({}: HeroSectionProps) {
   const handleDownloadCV = () => {
-    window.open("/front-end-gabriel-messias-da-rosa-curriculo.pdf");
+    window.open("/files/front-end-gabriel-messias-da-rosa-curriculo.pdf");
   };
 
   return (
