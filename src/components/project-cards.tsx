@@ -27,25 +27,27 @@ export default function ProjectCards({
   }, [isInView]);
   return (
     <div className="flex justify-center">
-      <Parallax pages={projects.length} className="z-50 bg-black max-w-[93%] ">
+      <Parallax pages={projects.length} className="z-50 bg-black max-w-[93%]">
         {projects.map((project, index) => {
           return (
             <ParallaxLayer
               key={index}
               offset={index}
               speed={0.2}
-              className="bg-gray-100 flex-1"
+              className="bg-gray-100 flex-1 h-full"
             >
-              <div className="flex gap-x-12 items-center p-6 flex-1 h-full">
-                <div className="flex-1 gap-6 flex flex-col h-full">
-                  <h3 className="text-5xl font-semibold">{project.name}</h3>
-                  <p className="text-lg font-light">{project.description}</p>
+              <div className="overflow-y-scroll scrollbar-hide flex flex-col lg:flex-row gap-6 lg:gap-x-12 items-center p-1 md:p-6 flex-1 h-[80dvh]">
+                <div className="flex-1 gap-3 md:gap-6 flex flex-col h-full">
+                  <h3 className="text-2xl md:text-5xl font-semibold">
+                    {project.name}
+                  </h3>
+                  <p className="text-xs md:text-lg font-light">{project.description}</p>
                   <div className="flex flex-wrap">
                     {project.techStack.map((tech, index) => {
                       return (
                         <motion.div
                           key={index}
-                          className="bg-black rounded-sm px-4 py-2 text-sm font-semibold text-gray-100 m-2"
+                          className="bg-black rounded-sm px-2 py-1 md:px-4 md:py-2 text-sm font-semibold text-gray-100 m-[0.1rem] md:m-2"
                         >
                           {tech}
                         </motion.div>

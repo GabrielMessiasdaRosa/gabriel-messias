@@ -4,7 +4,7 @@ import TimelineSection from "@/components/timeline-section";
 
 export default function Home() {
   return (
-    <main className="h-[2000px] ">
+    <main>
       <HeroSection />
       <Container>
         <TimelineSection />
