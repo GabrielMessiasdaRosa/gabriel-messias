@@ -1,7 +1,8 @@
 "use client";
 
-import React from "react";
-import NavbarItem, { NavbarItemProps } from "./navbar-item";
+import { menuItems } from "@/constants/menu-items";
+import { useState } from "react";
+import NavbarItem from "./navbar-item";
 import {
   Navbar as NUINavbar,
   NavbarBrand,
@@ -12,22 +13,18 @@ import {
 export interface NavbarProps {}
 
 export default function Navbar({}: NavbarProps) {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  console.log(isMenuOpen);
+
   return (
     <NUINavbar
-      onMenuOpenChange={() => setIsMenuOpen(!isMenuOpen)}
       shouldHideOnScroll
+      isMenuOpen={isMenuOpen}
       className="backdrop-blur-3xl bg-black flex"
     >
       <NavbarBrand>
         <div className="flex gap-2 items-center">
-          <p className="font-major-mono font-extrabold text-4xl">GM</p>
-          <div className="flex flex-col justify-center">
-            <div className="text-primary-500 -mb-1">desenvolvimento</div>
-            <div id={"subs"} className="text-cyan-500 -mt-1">
-              front-end
-            </div>
-          </div>
+          <p className="font-major-mono font-extrabold text-4xl">GMR</p>
         </div>
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
@@ -36,29 +33,19 @@ export default function Navbar({}: NavbarProps) {
         ))}
       </NavbarContent>
       <NavbarMenuToggle
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-        className="sm:hidden "
+        className="sm:hidden"
       />
       <NavbarMenu className="bg-black">
         {menuItems.map((item, index) => (
-          <NavbarItem item={item} key={`${item}` + `${index}`} />
+          <NavbarItem
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            item={item}
+            key={`${item}` + `${index}`}
+          />
         ))}
       </NavbarMenu>
     </NUINavbar>
   );
 }
-
-const menuItems: NavbarItemProps["item"][] = [
-  {
-    href: "/",
-    label: "~/Home",
-  },
-  {
-    href: "/projetos",
-    label: "~/Projetos",
-  },
-  {
-    href: "/contato",
-    label: "~/Contato",
-  },
-];

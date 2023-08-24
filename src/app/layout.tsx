@@ -1,4 +1,5 @@
 import Cursor from "@/components/cursor";
+import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import type { Metadata } from "next";
 import { Ubuntu_Mono } from "next/font/google";
@@ -27,12 +28,12 @@ export default function RootLayout({
       lang="pt"
       className="font-mono scroll-smooth bg-gray-100 text-gray-50"
     >
-      <body className={ubuntu_mono.className}>
+      <body className={`block-main-scroll ${ubuntu_mono.className}`}>
         <Providers>
           <Cursor />
           <Navbar />
           {children}
-          {/* <Footer /> */}
+          <Footer />
         </Providers>
       </body>
     </html>

@@ -6,6 +6,28 @@
 .debug {
   border: 1px solid red;
 }
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #303030 rgb(243 244 246);
+  scroll-behavior: smooth;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgb(243 244 246);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border-radius: 0px;
+  border: 3px none rgb(243 244 246);
+}
 
 html *,
 html *:before,
@@ -16,6 +38,14 @@ html *:after {
 nav header {
   @apply mx-auto max-w-[120rem] px-4 sm:px-6 lg:px-8 !important;
 }
+
+.mix-blend {
+  mix-blend-mode: difference !important;
+  background-color: white !important;
+  position: absolute !important;
+  z-index: 1 !important;
+}
+
 .custom-shape-divider-bottom-1691727814 {
   position: absolute;
   bottom: 0;
@@ -33,6 +63,23 @@ nav header {
   height: 87px;
   transform: rotateY(180deg);
 }
+.custom-shape-divider-top-1692881415 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1692881415 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 30px;
+  transform: rotateY(180deg);
+}
 
 .font-major-mono {
   font-family: "Major Mono Display", monospace;
@@ -41,4 +88,60 @@ nav header {
 .font-prompt {
   font-family: "Major Mono Display", monospace;
   font-family: "Prompt", sans-serif;
+}
+
+.block-main-scroll {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.arrow-up {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 34%, 0% 50%);
+}
+
+.arrow-down {
+  clip-path: polygon(50% 67%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.of-hidden {
+  overflow: hidden !important;
+}
+
+.text-gradient-animate {
+  background: -webkit-linear-gradient(
+    360deg,
+    #b881ff,
+    rgb(143, 255, 238),
+    #ff9950,
+    #b881ff,
+    rgb(143, 255, 238),
+    #ff9950,
+    #b881ff,
+    rgb(143, 255, 238),
+    #ff9950,
+    #b881ff,
+    rgb(143, 255, 238),
+    #ff9950,
+    #b881ff,
+    rgb(143, 255, 238),
+    #ff9950,
+    #b881ff
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 600%;
+  animation: glow 100s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: -400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
