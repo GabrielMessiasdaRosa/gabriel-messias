@@ -25,7 +25,7 @@ export default function NavbarItem({ item, onClick }: NavbarItemProps) {
       isActive={isActive}
     >
       <Link
-        className="hover:text-primary-800 text-primary-500 hover-effect"
+        className="transition-all text-primary-500 hover-effect hover:text-white "
         href={item.href}
       >
         {item.label}
