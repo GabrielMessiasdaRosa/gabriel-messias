@@ -1,5 +1,6 @@
 "use client";
 
+import { socialMediaItems } from "@/constants/social-media-items";
 import { Button } from "./next-ui-exports";
 import ParticlesBg from "./particles-bg";
 export interface HeroSectionProps {}
@@ -20,21 +21,21 @@ export default function HeroSection({}: HeroSectionProps) {
             </h1>
             <h2 className="-mt-4 lg:-mt-2">
               <span className=" font-bold font-prompt text-2xl lg:text-4xl hover-effect-lg">
-                desenvolvedor front-end
+                desenvolvedor
               </span>
             </h2>
           </div>
           <div className="lg:w-1/2 gap-8 flex flex-col items-start lg:text-start">
             <p className="lg:text-3xl text-xl text-center lg:text-start">
-              Descubra como a{" "}
-              <span className="text-[#b881ff] font-prompt">criatividade</span> e
-              o <span className="text-[#ff9950] font-prompt">código</span> se unem para
+              Unindo{" "}
+              <span className="text-[#b881ff] font-prompt">criatividade</span> e{" "}
+              <span className="text-[#ff9950] font-prompt">código</span> para
               criar{" "}
               <span className="font-prompt text-2xl lg:text-4xl text-gradient-animate">
-                soluções únicas !
+                soluções únicas!
               </span>
             </p>
-            <div className="flex w-full lg:w-auto gap-8 items-center justify-evenly">
+            <div className="flex flex-col md:flex-row w-full lg:w-auto gap-2 md:gap-8 items-center justify-evenly">
               <Button
                 onClick={handleDownloadCV}
                 className="rounded-sm hover-effect"
@@ -42,18 +43,26 @@ export default function HeroSection({}: HeroSectionProps) {
               >
                 CV Formal (PDF)
               </Button>
-              <a
-                href="https://www.linkedin.com/in/gabriel-messias-rosa/"
-                target="_blank"
-              >
-                <Button
-                  className="transition-all rounded-sm text-white bg-black hover-effect"
-                  color="primary"
-                  variant="bordered"
-                >
-                  Linkedin
-                </Button>
-              </a>
+              <div className="flex items-center justify-center space-x-4 mt-2">
+                {socialMediaItems
+                  .map((item, index) => (
+                    <a
+                      key={index}
+                      className="flex w-fit"
+                      href={item.href}
+                      target="_blank"
+                    >
+                      <div className="w-8 h-8">{item.icon}</div>
+                      <h5
+                        key={index}
+                        className="text-primary-500 font-prompt text-lg lg:text-xl hover-effect"
+                      >
+                        {item.label}
+                      </h5>
+                    </a>
+                  ))
+                  .slice(0, 2)}
+              </div>
             </div>
           </div>
         </div>

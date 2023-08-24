@@ -9,30 +9,24 @@ import TimelineItem from "./timeline-item";
 export interface TimelineListProps {}
 
 export default function TimelineList({}: TimelineListProps) {
-  const targetRef = useRef(null);
+  const targetRef = useRef<any>(null);
   const [currentPage, setCurrentPage] = useState<number>(0);
   const [direction, setDirection] = useState<"up" | "down" | null>(null);
 
   useEffect(() => {
-    // @ts-ignore
     return targetRef.current.scrollTo(currentPage);
   }, [currentPage]);
   return (
-    <div className="flex flex-col items-center overflow-hidden">
+    <div className="flex min-h-fit w-[95dvw] of-hidden h-[80dvh] flex-col items-center overflow-hidden">
       <Parallax
         config={{ duration: 0, decay: 1, mass: 0.4, tension: 0.4 }}
         ref={targetRef}
         pages={periods.length}
-        className="max-w-[95dvw] of-hidden  max-h-[80dvh] md:px-8"
+        className="max-w-[95dvw] of-hidden max-h-[80dvh] md:px-8"
       >
         {periods.map((timelinePeriod, index) => {
           return (
-            <TimelineItem
-              currentPage={currentPage}
-              key={index}
-              index={index}
-              period={timelinePeriod}
-            />
+            <TimelineItem key={index} index={index} period={timelinePeriod} />
           );
         })}
         <ParallaxLayer

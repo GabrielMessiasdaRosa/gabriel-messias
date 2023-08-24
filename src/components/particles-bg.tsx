@@ -3,8 +3,8 @@
 import { useCallback } from "react";
 import Particles, { ParticlesProps } from "react-particles";
 import { loadSlim } from "tsparticles-slim";
-
 import type { Container, Engine } from "tsparticles-engine";
+
 export interface ParticlesBgProps {}
 
 export default function ParticlesBg({}: ParticlesBgProps) {

@@ -1,16 +1,16 @@
 "use client";
 
+import { NavbarItemType } from "@/types/navbar-item-type";
+import Link from "next/link";
 import React from "react";
-import { Link, NavbarItem as NUINavbarItem } from "./next-ui-exports";
+import { NavbarItem as NUINavbarItem } from "./next-ui-exports";
 
 export interface NavbarItemProps {
-  item: {
-    href: string;
-    label: string;
-  };
+  item: NavbarItemType;
+  onClick?: () => void;
 }
 
-export default function NavbarItem({ item }: NavbarItemProps) {
+export default function NavbarItem({ item, onClick }: NavbarItemProps) {
   const [isActive, setIsActive] = React.useState(false);
 
   React.useEffect(() => {
@@ -20,6 +20,7 @@ export default function NavbarItem({ item }: NavbarItemProps) {
   return (
     <NUINavbarItem
       key={item.label}
+      onClick={onClick}
       className="active:scale-95"
       isActive={isActive}
     >

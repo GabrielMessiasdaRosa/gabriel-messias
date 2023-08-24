@@ -1,4 +1,5 @@
 import Cursor from "@/components/cursor";
+import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import type { Metadata } from "next";
 import { Ubuntu_Mono } from "next/font/google";
@@ -32,7 +33,7 @@ export default function RootLayout({
           <Cursor />
           <Navbar />
           {children}
-          {/* <Footer /> */}
+          <Footer />
         </Providers>
       </body>
     </html>
