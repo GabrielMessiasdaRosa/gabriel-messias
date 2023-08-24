@@ -6,13 +6,9 @@ import { AnimatePresence, motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 export interface ProjectCardsProps {
   projects: ProjectType[];
-  currentPage: number;
 }
 
-export default function ProjectCards({
-  projects,
-  currentPage,
-}: ProjectCardsProps) {
+export default function ProjectCards({ projects }: ProjectCardsProps) {
   const ref = useRef(null);
   const isInView = useInView(ref);
 
@@ -41,7 +37,9 @@ export default function ProjectCards({
                   <h3 className="text-2xl md:text-5xl font-semibold">
                     {project.name}
                   </h3>
-                  <p className="text-xs md:text-lg font-light">{project.description}</p>
+                  <p className="text-xs md:text-lg font-light">
+                    {project.description}
+                  </p>
                   <div className="flex flex-wrap">
                     {project.techStack.map((tech, index) => {
                       return (

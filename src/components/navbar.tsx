@@ -1,7 +1,8 @@
 "use client";
 
-import React from "react";
-import NavbarItem, { NavbarItemProps } from "./navbar-item";
+import { menuItems } from "@/constants/menu-items";
+import { useState } from "react";
+import NavbarItem from "./navbar-item";
 import {
   Navbar as NUINavbar,
   NavbarBrand,
@@ -12,11 +13,13 @@ import {
 export interface NavbarProps {}
 
 export default function Navbar({}: NavbarProps) {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  console.log(isMenuOpen);
+
   return (
     <NUINavbar
-      onMenuOpenChange={() => setIsMenuOpen(!isMenuOpen)}
       shouldHideOnScroll
+      isMenuOpen={isMenuOpen}
       className="backdrop-blur-3xl bg-black flex"
     >
       <NavbarBrand>
@@ -30,30 +33,19 @@ export default function Navbar({}: NavbarProps) {
         ))}
       </NavbarContent>
       <NavbarMenuToggle
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-        className="sm:hidden "
+        className="sm:hidden"
       />
       <NavbarMenu className="bg-black">
         {menuItems.map((item, index) => (
-          <NavbarItem item={item} key={`${item}` + `${index}`} />
+          <NavbarItem
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            item={item}
+            key={`${item}` + `${index}`}
+          />
         ))}
-        <NavbarItem item={{ href: "#projects", label: "projects" }} />
       </NavbarMenu>
     </NUINavbar>
   );
 }
-
-const menuItems: NavbarItemProps["item"][] = [
-  {
-    href: "/",
-    label: "~/home",
-  },
-  {
-    href: "/#projects",
-    label: "~/trajetoria",
-  },
-  {
-    href: "/#contato",
-    label: "~/contato",
-  },
-];
