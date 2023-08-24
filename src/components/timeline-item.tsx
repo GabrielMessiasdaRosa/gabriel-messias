@@ -17,7 +17,7 @@ export default function TimelineItem({
 }: TimelineItemProps) {
   return (
     <>
-      <ParallaxLayer className="max-w-[100dvw] ml-6" speed={0.5} offset={index}>
+      <ParallaxLayer className="max-w-[100dvw] md:ml-6" speed={0.5} offset={index}>
         <ProjectCards currentPage={currentPage} projects={period.projects} />
       </ParallaxLayer>
     </>
