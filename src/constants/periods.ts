@@ -11,7 +11,7 @@ export const periods: PeriodType[] = [
            a administração de reports de domínios. (sem mais detalhes devido
            condiçoẽs contratuais).`,
         techStack: ["Typescript", "NextJS", "TailwindCSS"],
-        image: "https://via.placeholder.com/1024x720",
+        image: "/images/dns-filter-projects-logo.webp",
       },
       {
         name: "~/Aero-assados",
@@ -32,7 +32,7 @@ export const periods: PeriodType[] = [
           "React Native",
           "Firebase",
         ],
-        image: "https://via.placeholder.com/1024x720",
+        image: "/images/aeroassados-1.webp",
       },
     ],
   },
@@ -49,7 +49,7 @@ export const periods: PeriodType[] = [
           uma experiência unificada e refletindo o compromisso da Chatkick em estar na vanguarda da tecnologia de recrutamento.
           `,
         techStack: ["Typescript", "NextJS", "TailwindCSS", "Framer motion"],
-        image: "https://via.placeholder.com/1024x720",
+        image: "/images/chatkick.webp",
       },
       {
         name: "~/DMT-Domain Management Tool",
@@ -57,7 +57,7 @@ export const periods: PeriodType[] = [
            Muitas funcionalidades foram adicionadas e manutenções realizadas, o que resultou em uma maior 
            aquisição de conhecimento. No meio do ano de 2022, o entendimento sobre produto e negócio já estava muito mais claro.`,
         techStack: ["Typescript", "NextJS", "TailwindCSS"],
-        image: "https://via.placeholder.com/1024x720",
+        image: "/images/dns-filter-projects-logo.webp",
       },
       {
         name: "~/80Lines",
@@ -68,7 +68,7 @@ export const periods: PeriodType[] = [
           refletisse a identidade da empresa.
   `,
         techStack: ["Typescript", "NextJS", "TailwindCSS", "Framer motion"],
-        image: "https://via.placeholder.com/1024x720",
+        image: "/images/80lines-site-1.webp",
       },
     ],
   },
@@ -90,26 +90,7 @@ export const periods: PeriodType[] = [
           "PostgreSQL",
           "Cloud - AWS",
         ],
-        image: "https://via.placeholder.com/1024x720",
-      },
-      {
-        name: "~/Aero-assados",
-        description: `Devido ao sucesso do app na região, fez-se necessário a reformulaçao do backend e alguns ajustes no app e na dashboard admin.
-            Participei da migracao do backend para NestJS e TypeORM, e da implementaçao de novas features no app e na dashboard admin. 
-            Esse foi o meu primeiro projeto Full-stack de verdade. 
-           `,
-        techStack: [
-          "Typescript",
-          "NextJS",
-          "TailwindCSS",
-          "Chakra UI",
-          "React Native",
-          "NestJS",
-          "TypeORM",
-          "PostgreSQL",
-          "Cloud - AWS",
-        ],
-        image: "https://via.placeholder.com/1024x720",
+        image: "/images/dns-filter-projects-logo.webp",
       },
       {
         name: "~/80Lines",
@@ -119,7 +100,7 @@ export const periods: PeriodType[] = [
           O site que esta no ar atualmente é o resultado desse trabalho.
         `,
         techStack: ["Typescript", "NextJS", "TailwindCSS", "Framer motion"],
-        image: "https://via.placeholder.com/1024x720",
+        image: "/images/80lines-site-2.webp",
       },
       /* {
           name: "~/A sua empresa aqui !",
