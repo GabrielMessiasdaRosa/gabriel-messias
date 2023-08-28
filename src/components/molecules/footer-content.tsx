@@ -11,7 +11,7 @@ export default function FooterContent({}: FooterContentProps) {
       <div className="flex-1 border-l-2 border-primary-500 pl-2 space-y-10">
         {menuItems.map((item, index) => (
           <a
-            key={index}
+            key={`${item.label}-footer-${index}`}
             className="flex w-fit"
             href={item.href}
             target="_blank"
@@ -24,7 +24,7 @@ export default function FooterContent({}: FooterContentProps) {
       </div>
       <div className="flex-1 border-l-2 border-primary-500 pl-2 space-y-10">
         {socialMediaItems.map((item, index) => (
-          <div key={index} className="w-fit">
+          <div key={`${item.label}-footer-${index}`} className="w-fit">
             <a className="flex w-fit" href={item.href} target="_blank">
               <div className="w-8 h-8">{item.icon}</div>
               <h5 className="text-primary-500 transition-all hover:-translate-y-1 hover:text-white font-prompt text-lg lg:text-xl hover-effect">
