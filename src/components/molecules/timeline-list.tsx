@@ -8,18 +8,18 @@ export default function TimelineList({}: TimelineListProps) {
   return (
     <div className="flex flex-col relative overflow-y-scroll overflow-x-hidden  w-[90dvw] h-[80dvh] text-black">
       <Parallax
-        config={{ duration: 0, decay: 1, mass: 0.4, tension: 0.4 }}
+        config={{ duration: 3, decay: 1, mass: 0.4, tension: 0.4 }}
         pages={projects.length}
-        className="max-w-[90dvw] max-h-[80dvh]  scrollbar-hide"
+        className="max-w-[90dvw]  scrollbar-hide"
       >
         {projects.map((project, index) => (
           <ParallaxLayer
             key={`${project.name}-${index}`}
             offset={index}
             speed={0}
-            className="bg-gray-100 flex-1 h-full pt-[4rem]"
+            className="bg-gray-100 flex-1 h-[100dvh] py-[4rem]"
           >
-            <div className="overflow-y-scroll scrollbar-hide flex flex-col lg:flex-row gap-6 lg:gap-x-12 items-center p-1 md:p-6 flex-1 h-[80dvh]">
+            <div className="overflow-y-auto flex flex-col lg:flex-row gap-6 lg:gap-x-12 items-center p-1 md:p-6 flex-1 border-black border-2 h-full">
               <div className="flex-1 gap-3 md:gap-6 flex flex-col h-full">
                 <h3 className="text-2xl md:text-5xl font-semibold">
                   {project.name}
