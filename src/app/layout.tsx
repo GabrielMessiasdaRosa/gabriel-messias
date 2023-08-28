@@ -1,11 +1,12 @@
-import Cursor from "@/components/cursor";
-import Footer from "@/components/footer";
-import Navbar from "@/components/navbar";
+import Cursor from "@/components/molecules/cursor";
+import Footer from "@/components/organisms/footer";
+import Navbar from "@/components/organisms/navbar";
 import type { Metadata } from "next";
 import { Ubuntu_Mono } from "next/font/google";
 import * as React from "react";
 import "./globals.css";
 import { Providers } from "./providers";
+import WppCtaPopup from "@/components/molecules/wpp-cta-popup";
 
 export const metadata: Metadata = {
   title: "Gabriel Messias da Rosa",
@@ -121,6 +122,7 @@ export default function RootLayout({
     >
       <body className={`block-main-scroll ${ubuntu_mono.className}`}>
         <Providers>
+          <WppCtaPopup />
           <Cursor />
           <Navbar />
           {children}

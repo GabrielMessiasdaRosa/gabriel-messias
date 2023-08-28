@@ -3,7 +3,7 @@
 import { NavbarItemType } from "@/types/navbar-item-type";
 import Link from "next/link";
 import React from "react";
-import { NavbarItem as NUINavbarItem } from "./next-ui-exports";
+import { NavbarItem as NUINavbarItem } from "../next-ui-exports";
 
 export interface NavbarItemProps {
   item: NavbarItemType;
@@ -19,7 +19,6 @@ export default function NavbarItem({ item, onClick }: NavbarItemProps) {
 
   return (
     <NUINavbarItem
-      key={item.label}
       onClick={onClick}
       className="active:scale-95"
       isActive={isActive}
