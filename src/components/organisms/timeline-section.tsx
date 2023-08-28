@@ -1,4 +1,6 @@
-import TimelineList from "./timeline-list";
+"use client";
+
+import TimelineList from "../molecules/timeline-list";
 
 export interface TimelineSectionProps {}
 

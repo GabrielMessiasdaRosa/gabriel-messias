@@ -1,8 +1,8 @@
 "use client";
 
 import { socialMediaItems } from "@/constants/social-media-items";
-import { Button } from "./next-ui-exports";
-import ParticlesBg from "./particles-bg";
+import { Button } from "../next-ui-exports";
+import ParticlesBg from "../molecules/particles-bg";
 export interface HeroSectionProps {}
 
 export default function HeroSection({}: HeroSectionProps) {
@@ -47,16 +47,13 @@ export default function HeroSection({}: HeroSectionProps) {
                 {socialMediaItems
                   .map((item, index) => (
                     <a
-                      key={index}
+                      key={`${item.label}-hero-${index}`}
                       className="flex w-fit"
                       href={item.href}
                       target="_blank"
                     >
                       <div className="w-8 h-8">{item.icon}</div>
-                      <h5
-                        key={index}
-                        className="text-primary-500 font-prompt text-lg lg:text-xl hover-effect"
-                      >
+                      <h5 className="text-primary-500 font-prompt text-lg lg:text-xl hover-effect">
                         {item.label}
                       </h5>
                     </a>

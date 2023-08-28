@@ -1,5 +1,5 @@
-import Container from "./container";
-import FooterContent from "./footer-content";
+import Container from "../atom/container";
+import FooterContent from "../molecules/footer-content";
 
 export interface FooterProps {}
 

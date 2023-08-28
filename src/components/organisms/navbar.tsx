@@ -2,14 +2,14 @@
 
 import { menuItems } from "@/constants/menu-items";
 import { useState } from "react";
-import NavbarItem from "./navbar-item";
+import NavbarItem from "../molecules/navbar-item";
 import {
   Navbar as NUINavbar,
   NavbarBrand,
   NavbarContent,
   NavbarMenu,
   NavbarMenuToggle,
-} from "./next-ui-exports";
+} from "../next-ui-exports";
 export interface NavbarProps {}
 
 export default function Navbar({}: NavbarProps) {
