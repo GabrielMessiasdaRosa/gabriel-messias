@@ -124,6 +124,15 @@ export default function RootLayout({
         <Providers>
           <WppCtaPopup />
           <Cursor />
+          <div className="flex flex-1 justify-center items-center bg-yellow-100">
+            <span>🚧</span>
+            <text className="text-gray-700 font-bold px-2">
+              <span>👨‍💻</span>
+              Esta página está em construção e pode receber atualizações a
+              qualquer momento.
+            </text>
+            <span>🚧</span>
+          </div>
           <Navbar />
           {children}
           <Footer />

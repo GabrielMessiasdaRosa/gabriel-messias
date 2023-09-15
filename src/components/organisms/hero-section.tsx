@@ -64,7 +64,7 @@ export default function HeroSection({}: HeroSectionProps) {
           </div>
         </div>
       </header>{" "}
-      <div className="absolute w-full text-gray-900 custom-shape-divider-bottom-1691727814">
+     {/*  <div className="absolute w-full text-gray-900 custom-shape-divider-bottom-1691727814">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +77,7 @@ export default function HeroSection({}: HeroSectionProps) {
             className="shape-fill"
           ></path>
         </svg>
-      </div>
+      </div> */}
     </div>
   );
 }

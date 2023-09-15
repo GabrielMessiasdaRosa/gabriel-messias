@@ -25,7 +25,7 @@ export default function NavbarItem({ item, onClick }: NavbarItemProps) {
     >
       <Link
         target={item.target}
-        className="transition-all text-primary-500 hover-effect hover:text-white "
+        className="transition-all text-primary-500 hover-effect text-lg hover:text-white "
         href={item.href}
       >
         {item.label}
