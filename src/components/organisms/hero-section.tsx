@@ -1,8 +1,8 @@
 "use client";
 
 import { socialMediaItems } from "@/constants/social-media-items";
-import { Button } from "../next-ui-exports";
 import ParticlesBg from "../molecules/particles-bg";
+import { Button } from "../next-ui-exports";
 export interface HeroSectionProps {}
 
 export default function HeroSection({}: HeroSectionProps) {
@@ -19,11 +19,6 @@ export default function HeroSection({}: HeroSectionProps) {
             <h1 className="text-primary-500 font-prompt text-4xl lg:text-8xl hover-effect-lg">
               Gabriel Messias da Rosa
             </h1>
-            <h2 className="-mt-4 lg:-mt-2">
-              <span className=" font-bold font-prompt text-2xl lg:text-4xl hover-effect-lg">
-                desenvolvedor
-              </span>
-            </h2>
           </div>
           <div className="lg:w-1/2 gap-8 flex flex-col items-start lg:text-start">
             <p className="lg:text-3xl text-xl text-center lg:text-start">
@@ -64,7 +59,7 @@ export default function HeroSection({}: HeroSectionProps) {
           </div>
         </div>
       </header>{" "}
-     {/*  <div className="absolute w-full text-gray-900 custom-shape-divider-bottom-1691727814">
+      {/*  <div className="absolute w-full text-gray-900 custom-shape-divider-bottom-1691727814">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"

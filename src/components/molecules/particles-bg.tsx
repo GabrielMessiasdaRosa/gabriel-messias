@@ -2,8 +2,8 @@
 
 import { useCallback } from "react";
 import Particles, { ParticlesProps } from "react-particles";
-import { loadSlim } from "tsparticles-slim";
 import type { Container, Engine } from "tsparticles-engine";
+import { loadSlim } from "tsparticles-slim";
 
 export interface ParticlesBgProps {}
 
@@ -36,7 +36,7 @@ const particlesOptions: ParticlesProps["options"] = {
       value: "#000000",
     },
   },
-  fpsLimit: 120,
+  fpsLimit: 60,
   interactivity: {
     events: {
       onClick: {
@@ -46,13 +46,7 @@ const particlesOptions: ParticlesProps["options"] = {
       onHover: {
         enable: true,
         mode: "grab",
-        parallax: {
-          enable: true,
-          force: 60,
-          smooth: 10,
-        },
       },
-      resize: true,
     },
     modes: {
       push: {
@@ -84,9 +78,9 @@ const particlesOptions: ParticlesProps["options"] = {
     number: {
       density: {
         enable: true,
-        area: 300,
+        area: 400,
       },
-      value: 80,
+      value: 90,
     },
     opacity: {
       value: 0.5,
@@ -98,5 +92,4 @@ const particlesOptions: ParticlesProps["options"] = {
       value: { min: 1, max: 2 },
     },
   },
-  detectRetina: true,
 };
