@@ -2,7 +2,6 @@
 
 import { socialMediaItems } from "@/constants/social-media-items";
 import ParticlesBg from "../molecules/particles-bg";
-import { Button } from "../next-ui-exports";
 export interface HeroSectionProps {}
 
 export default function HeroSection({}: HeroSectionProps) {
@@ -19,6 +18,11 @@ export default function HeroSection({}: HeroSectionProps) {
             <h1 className="text-primary-500 font-prompt text-4xl lg:text-8xl hover-effect-lg">
               Gabriel Messias da Rosa
             </h1>
+            <h2>
+              <span className="text-gray-300 font-prompt text-2xl lg:text-4xl hover-effect-lg">
+                Front-end Developer
+              </span>
+            </h2>
           </div>
           <div className="lg:w-1/2 gap-8 flex flex-col items-start lg:text-start">
             <p className="lg:text-3xl text-xl text-center lg:text-start">
@@ -31,13 +35,13 @@ export default function HeroSection({}: HeroSectionProps) {
               </span>
             </p>
             <div className="flex flex-col md:flex-row w-full lg:w-auto gap-2 md:gap-8 items-center justify-evenly">
-              <Button
+              {/*  <Button
                 onClick={handleDownloadCV}
                 className="rounded-sm hover-effect"
                 color="success"
               >
                 CV Formal (PDF)
-              </Button>
+              </Button> */}
               <div className="flex items-center justify-center space-x-4 mt-2">
                 {socialMediaItems
                   .map((item, index) => (
