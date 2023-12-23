@@ -11,9 +11,43 @@ export default function HeroSection({}: HeroSectionProps) {
 
   return (
     <div className="relative h-[80dvh]">
-      <header className="header relative h-[80dvh] flex  items-center justify-center">
+      <header className="header relative h-[80dvh] flex  items-center justify-center  overflow-hidden">
         <ParticlesBg />
-        <div className="flex px-8 gap-y-3 flex-col lg:flex-row flex-1 max-w-7xl items-center justify-center ">
+        <div className="flex absolute w-full top-[50%] -left-56 -z-50 flex-col rotate-45 gap-5">
+          <div className="border-b-1 border-t-1 w-full h-5 border-gray-300" />
+          <div className="border-b-1 border-t-1 w-full h-5 border-gray-300" />
+          <div className="border-b-1 border-t-1 w-full h-5 border-gray-300" />
+          <div className="border-b-1 border-t-1 w-full h-5 border-gray-300" />
+        </div>
+
+        <div className="space-y-6">
+          <h1 className="text-primary-500 font-prompt text-4xl lg:text-8xl hover-effect-lg">
+            Gabriel Messias da Rosa
+          </h1>
+          <h2>
+            <span className="font-prompt text-2xl lg:text-6xl hover-effect-lg text-gradient-animate">
+              Full Stack Developer
+            </span>
+          </h2>
+          <div className="flex space-x-4 mt-2">
+            {socialMediaItems
+              .map((item, index) => (
+                <a
+                  key={`${item.label}-hero-${index}`}
+                  className="flex w-fit justify-center items-center"
+                  href={item.href}
+                  target="_blank"
+                >
+                  <div className="w-8 h-8">{item.icon}</div>
+                  <h5 className="text-primary-500 font-prompt text-lg lg:text-2xl hover-effect">
+                    {item.label}
+                  </h5>
+                </a>
+              ))
+              .slice(0, 2)}
+          </div>
+        </div>
+        {/* <div className="flex px-8 gap-y-3 flex-col lg:flex-row flex-1 max-w-7xl items-center justify-center ">
           <div className="lg:w-1/2 flex flex-col text-center lg:text-start justify-center h-1/2 font-extrabold text-4xl">
             <h1 className="text-primary-500 font-prompt text-4xl lg:text-8xl hover-effect-lg">
               Gabriel Messias da Rosa
@@ -35,13 +69,13 @@ export default function HeroSection({}: HeroSectionProps) {
               </span>
             </p>
             <div className="flex flex-col md:flex-row w-full lg:w-auto gap-2 md:gap-8 items-center justify-evenly">
-              {/*  <Button
+               <Button
                 onClick={handleDownloadCV}
                 className="rounded-sm hover-effect"
                 color="success"
               >
                 CV Formal (PDF)
-              </Button> */}
+              </Button>
               <div className="flex items-center justify-center space-x-4 mt-2">
                 {socialMediaItems
                   .map((item, index) => (
@@ -61,7 +95,7 @@ export default function HeroSection({}: HeroSectionProps) {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </header>{" "}
       {/*  <div className="absolute w-full text-gray-900 custom-shape-divider-bottom-1691727814">
         <svg
