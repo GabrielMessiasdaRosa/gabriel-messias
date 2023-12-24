@@ -29,6 +29,11 @@
   border: 3px none rgb(243 244 246);
 }
 
+html {
+  --scroll-behavior: smooth !important;
+  scroll-behavior: smooth !important;
+}
+
 html *,
 html *:before,
 html *:after {

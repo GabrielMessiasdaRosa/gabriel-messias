@@ -10,14 +10,17 @@ export default function HeroSection({}: HeroSectionProps) {
   };
 
   return (
-    <div className="relative h-[80dvh]">
-      <header className="header relative h-[80dvh] flex  items-center justify-center  overflow-hidden">
+    <div className="relative h-[80dvh] px-8" id="top">
+      <header className="header relative h-[80dvh] flex  items-center justify-center ">
         <ParticlesBg />
-        <div className="flex absolute w-full top-[50%] -left-56 -z-50 flex-col rotate-45 gap-5">
-          <div className="border-b-1 border-t-1 w-full h-5 border-gray-300" />
-          <div className="border-b-1 border-t-1 w-full h-5 border-gray-300" />
-          <div className="border-b-1 border-t-1 w-full h-5 border-gray-300" />
-          <div className="border-b-1 border-t-1 w-full h-5 border-gray-300" />
+        <div className="invisible lg:visible absolute w-full top-[50%] -left-56 rotate-45 -z-50 ">
+          <div className="flex  flex-col  gap-5 relative">
+            <div className="border-b-1 border-t-1 w-full h-5 border-gray-300" />
+            <div className="border-b-1 border-t-1 w-full h-5 border-gray-300" />
+            <div className="border-b-1 border-t-1 w-full h-5 border-gray-300" />
+            <div className="border-b-1 border-t-1 w-full h-5 border-gray-300" />
+            <div className="bg-black w-40 h-60 -right-10 rotate-45 absolute"></div>
+          </div>
         </div>
 
         <div className="space-y-6">
@@ -26,7 +29,7 @@ export default function HeroSection({}: HeroSectionProps) {
           </h1>
           <h2>
             <span className="font-prompt text-2xl lg:text-6xl hover-effect-lg text-gradient-animate">
-              Full Stack Developer
+              Fullstack Developer
             </span>
           </h2>
           <div className="flex space-x-4 mt-2">

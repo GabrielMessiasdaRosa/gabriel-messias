@@ -1,4 +1,5 @@
 import Cursor from "@/components/molecules/cursor";
+import WppCtaPopup from "@/components/molecules/wpp-cta-popup";
 import Footer from "@/components/organisms/footer";
 import Navbar from "@/components/organisms/navbar";
 import type { Metadata } from "next";
@@ -6,7 +7,6 @@ import { Ubuntu_Mono } from "next/font/google";
 import * as React from "react";
 import "./globals.css";
 import { Providers } from "./providers";
-import WppCtaPopup from "@/components/molecules/wpp-cta-popup";
 
 export const metadata: Metadata = {
   title: "Gabriel Messias da Rosa",
@@ -116,23 +116,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang="pt"
-      className="font-mono scroll-smooth bg-gray-100 text-gray-50"
-    >
+    <html lang="pt" className="font-mono scroll-smooth bg-black text-gray-50 light">
       <body className={`block-main-scroll ${ubuntu_mono.className}`}>
         <Providers>
-          <WppCtaPopup />
           <Cursor />
-          <div className="flex flex-1 justify-center items-center bg-yellow-100">
-            <span>🚧</span>
-            <text className="text-gray-700 font-bold px-2">
-              <span>👨‍💻</span>
-              Esta página está em construção e pode receber atualizações a
-              qualquer momento.
-            </text>
-            <span>🚧</span>
-          </div>
           <Navbar />
           {children}
           <Footer />
