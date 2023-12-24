@@ -1,7 +1,8 @@
 import Cursor from "@/components/molecules/cursor";
-import WppCtaPopup from "@/components/molecules/wpp-cta-popup";
 import Footer from "@/components/organisms/footer";
 import Navbar from "@/components/organisms/navbar";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Ubuntu_Mono } from "next/font/google";
 import * as React from "react";
@@ -116,7 +117,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt" className="font-mono scroll-smooth bg-black text-gray-50 light">
+    <html
+      lang="pt"
+      className="font-mono scroll-smooth bg-black text-gray-50 light"
+    >
       <body className={`block-main-scroll ${ubuntu_mono.className}`}>
         <Providers>
           <Cursor />
@@ -124,6 +128,8 @@ export default function RootLayout({
           {children}
           <Footer />
         </Providers>
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
