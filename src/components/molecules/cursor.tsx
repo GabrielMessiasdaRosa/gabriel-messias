@@ -3,6 +3,8 @@
 import { motion, useMotionValue } from "framer-motion";
 import { useEffect, useState } from "react";
 export interface CursorProps {}
+const OFFSET = 8;
+const BREAKPOINT_TABLET = 768;
 
 export default function Cursor({}: CursorProps) {
   const [hover, setHover] = useState<boolean>(false);
@@ -13,7 +15,7 @@ export default function Cursor({}: CursorProps) {
   const cursorY = useMotionValue(-100);
 
   useEffect(() => {
-    const mobile = window.innerWidth < 768;
+    const mobile = window.innerWidth < BREAKPOINT_TABLET;
     if (!mobile) {
       const addHoverEffect = (event: any) => {
         const element = event.target;
@@ -27,8 +29,8 @@ export default function Cursor({}: CursorProps) {
         }
       };
       const moveCursor = (event: MouseEvent) => {
-        cursorX.set(event.clientX - 8);
-        cursorY.set(event.clientY - 8);
+        cursorX.set(event.clientX - OFFSET);
+        cursorY.set(event.clientY - OFFSET);
       };
       document.addEventListener("mouseover", addHoverEffect);
       window.addEventListener("mousemove", moveCursor);

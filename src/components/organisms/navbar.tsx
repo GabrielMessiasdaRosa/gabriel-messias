@@ -14,12 +14,14 @@ export interface NavbarProps {}
 
 export default function Navbar({}: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-  console.log(isMenuOpen);
+  
 
   return (
     <NUINavbar
       shouldHideOnScroll
       isMenuOpen={isMenuOpen}
+      data-te-smooth-scroll-init
+      data-te-easing="easeInOutQuart"
       className="backdrop-blur-3xl bg-black flex"
     >
       <NavbarBrand>

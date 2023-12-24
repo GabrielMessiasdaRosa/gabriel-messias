@@ -14,7 +14,6 @@ export default function FooterContent({}: FooterContentProps) {
             key={`${item.label}-footer-${index}`}
             className="flex w-fit"
             href={item.href}
-            target="_blank"
           >
             <h5 className="text-primary-500 transition-all hover:-translate-y-1 hover:text-white font-prompt text-lg lg:text-xl hover-effect">
               {item.label}
