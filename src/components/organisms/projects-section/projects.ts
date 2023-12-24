@@ -21,7 +21,7 @@ export const projects: {
     description: `é uma empresa de recrutamento norte americana, que tem como
     objetivo conectar empresas e candidatos utilizando IA para levantar
     relatórios de pontos fortes e pontos fracos do candidato atravez da 
-    gravação da entrevista. Elaborei o site da empresa utilizando NextJS com a com a UI/UX desenvolvida pela designer da empresa.`,
+    gravação da entrevista. Elaborei o site da empresa utilizando NextJS.`,
     work: "Frontend Developer",
     techs: ["Typescript", "NextJS", "TailwindCSS", "+ 4"],
     image: "/images/chatkick.png",
